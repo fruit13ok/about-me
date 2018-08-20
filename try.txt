@@ -1,0 +1,76 @@
+
+    About Me Project 0: TODO
+    1). Layout the page to look like the end product with HTML, CSS, Flexbox, Grid.
+        1.1) Nav of a.
+    2). Make it responsive with 2 media queries, full size / mobile size.
+        2.1) responsive hamburger menu.
+    3). Make the page functionable like the end product with Javascript, jQuery, DOM, bootstrap, and use placeholder assets.
+    4). Think about what I am going to put into this site, than replace those placeholder assets.
+    5). Do extra challenges.
+
+
+
+
+// good looking things, link flowing around
+https://www.jqueryscript.net/text/Minimal-jQuery-Based-3D-Ball-Tag-Cloud-cloudTag-js.html
+
+
+// pull news data, free, old news go back about only 1 year
+https://newsapi.org/register/success
+API key: 7294a9f6b1484346aaa344c8fd4ecacb
+
+An attribution link is a text link to NewsAPI.org that reads 'Powered by News API' or similar, and is required for free non-commercial use of the API.
+
+
+// pull news data, looks ok need to find out more
+https://code.tutsplus.com/tutorials/using-the-new-york-times-api-to-scrape-metadata--cms-27894
+https://developer.nytimes.com/
+https://developer.nytimes.com/faq
+https://developer.nytimes.com/article_search_v2.json#/README
+https://developer.nytimes.com/article_search_v2.json#/Console/GET/articlesearch.json
+API Key: 002d658108294c0287fbd18d98b4a677
+
+For applications that do not easily support logos or where Times data are used in alternative media formats, the written attribution "Data provided by The New York Times" can be substituted.
+
+
+// pull stock data, it work
+https://api.iextrading.com
+// allowed stock symbols
+https://iextrading.com/trading/eligible-symbols/
+
+EX: chart data for aapl 5 years
+https://api.iextrading.com/1.0/stock/aapl/chart/5y
+
+
+
+// pull news data, looks like is working, I have to search for year '2001', result will give me list of events of 2001
+https://en.wikipedia.org/w/api.php
+https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&prop=revisions&titles=Main%20Page&rvprop=content
+https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=2001
+https://en.wikipedia.org/wiki/2001
+https://www.youtube.com/watch?v=FzVBAgdFbDY
+https://www.youtube.com/watch?v=RPz75gcHj18
+https://www.mediawiki.org/wiki/Topic:Smsi5v9mg0po0dn0
+http://api.jquery.com/jquery.getjson/
+http://api.jquery.com/jQuery.ajax/
+
+
+// graph
+chart.js
+https://stackoverflow.com/questions/41852585/chart-js-clickable-bar
+https://jsfiddle.net/ha19ozqy/
+https://stackoverflow.com/questions/41867248/links-in-bar-charts-charts-js
+https://www.youtube.com/watch?v=sE08f4iuOhA&t=259s
+http://www.chartjs.org/docs/latest/charts/mixed.html
+
+
+// web scrape tool (not going to use yet)
+cheerio.js
+
+
+
+
+
+
+
+

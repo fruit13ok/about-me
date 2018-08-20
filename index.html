@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me Project 0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- <script src="./js/jquery.mobile-1.4.5.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Raleway:500,600" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <script src="./js/app.js" async defer></script>
+</head>
+<!-- https://www.ginifab.com/feeds/pms/pms_color_in_image.php -->
+<!-- https://www.youtube.com/watch?v=TrLN2YId-5M&t=37s -->
+
+<body id="gridContainer">
+    <header>
+        <h2>WELCOME</h2>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#about">ABOUT</a>
+                    <a class="nav-item nav-link" href="#portfolio">PORTFOLIO</a>
+                    <a class="nav-item nav-link" href="#testimonials">TESTIMONIALS</a>
+                    <a class="nav-item nav-link" href="#passion">PASSION</a>
+                    <a class="nav-item nav-link" href="#contact">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- https://www.w3schools.com/howto/howto_css_cards.asp -->
+    <main id="about">
+        <article class="card">
+            <img src="./assets/images/yi_liu400x400.jpg" alt="">
+            <h1>Yi Liu</h1>
+            <hr>
+            <h3>Full Stack Web Developer focusing on Back-End</h3>
+        </article>
+        <article>
+            <h2>ABOUT ME</h2>
+            <hr>
+            <div>
+                <p>I am a General Assembly student studying Full Stack Web Developer specialize in Back-End. I build dynamic
+                    database driven websites using Javascript, React, Express, Node, MongoDB, PostgreSQL, MySQL, jQuery,
+                    Python, Django, Ajax, CSS, HTML, API, Framework.</p>
+                <p>I am an easy going and dedicated person, love to work for long hours on the things that I passionated, work
+                    on multiple roles. My strengths are resilience, critical thinking, strategizing, and problem solving.</p>
+            </div>
+        </article>
+    </main>
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_ref_js_carousel.asp -->
+    <!-- https://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp -->
+    <!-- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_carousel_js&stacked=h -->
+    <section id="portfolio">
+        <h2>PROJECTS</h2>
+        <hr>
+        <div class="container mt-3">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li class="item1 active"></li>
+                    <li class="item2"></li>
+                    <li class="item3"></li>
+                </ul>
+                <!-- The slideshow -->
+                <!-- https://github.com/ashleydw/lightbox -->
+                <!-- http://ashleydw.github.io/lightbox/ -->
+                <!-- https://cdnjs.com/libraries/ekko-lightbox -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="./assets/images/monument_landing_page.png" data-toggle="lightbox">
+                            <img src="./assets/images/monument_landing_page.png" class="img-fluid">
+                        </a>
+                        <div class="carousel-caption">
+                            <p>
+                                <a href='https://github.com/fruit13ok/week-one-project'>monument landing page</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./assets/images/supermarket_website.png" data-toggle="lightbox">
+                            <img src="./assets/images/supermarket_website.png" class="img-fluid">
+                        </a>
+                        <div class="carousel-caption">
+                            <p>
+                                <a href='https://github.com/fruit13ok/week-two-project'>supermarket website</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./assets/images/geo_quakes.png" data-toggle="lightbox">
+                            <img src="./assets/images/geo_quakes.png" class="img-fluid">
+                        </a>
+                        <div class="carousel-caption">
+                            <p>
+                                <a href='https://github.com/fruit13ok/jquery-geoquakes-lab'>geo quakes</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- testimonials rotate in and out on a timer -->
+    <!-- http://css3.bradshawenterprises.com/cfimg/ -->
+    <!-- https://www.the-art-of-web.com/css/timing-function/ -->
+    <!-- https://stackoverflow.com/questions/30337621/fade-in-fade-out-of-words-in-array-list-using-javascript -->
+    <section id="testimonials">
+        <h2>TESTIMONIALS</h2>
+        <hr>
+        <div id="testimonials">
+            <p style="display: none;"></p>
+        </div>
+    </section>
+
+    <section id="passion">
+        <h2>my passion, How do world events affect stock</h2>
+        <hr>
+        <h3>Give stock symbol, daily closing price for N year</h3>
+        <form class="lookupStock">
+            <label>Lookup Stock</label>
+            <input type="text" class="stock-input" name="q" value="" placeholder="aapl">
+            <input type="submit" value="Go!" class="btn btn-primary">
+        </form>
+        <div id="stockMarket">
+
+        </div>
+        <h3>world news for N year</h3>
+        <div id="worldNews">
+
+        </div>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+
+    </section>
+    <section id="contact">
+        <h2>contact me</h2>
+        <hr>
+        <form class="contact" novalidate>
+            <!-- novalidate means not to be validated on submit -->
+            <div class="form-group col-third">
+                <input type="text" placeholder="Name">
+                <p class="error-message">Please enter your full name.</p>
+            </div>
+            <div class="form-group col-third">
+                <input type="email" placeholder="Email">
+                <p class="error-message">Please enter an email address.</p>
+            </div>
+            <div class="form-group col-third">
+                <input type="number" placeholder="Phone Number">
+                <p class="error-message">Please enter a Phone Number.</p>
+            </div>
+            <div class="form-group">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <p class="error-message">Please enter a message.</p>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <div>
+            <h5>My Email Address:</h5>
+            <p>fruit13ok@gmail.com</p>
+            <h5>Credit To:</h5>
+            <p>Lightbox to zoom image by "ekko-lightbox"</p>
+            <p>Stock data pull from "api.iextrading.com"</p>
+            <p>Historical Events pull from "Wikipedia"</p>
+            <p>Chart tool "chart.js"</p>
+        </div>
+        <nav>
+            <a href="https://www.facebook.com/profile.php?id=100006229458138">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://github.com/fruit13ok">
+                <i class="fab fa-github-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yi-liu-fruit13ok/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
