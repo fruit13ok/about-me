@@ -1,35 +1,23 @@
 // testimonials rotate in and out on a timer
-// var classes = [
-//     '<h1 class="animated infinite rotateOutUpLeft">Software</h1>',
-//     '<h1 class="animated infinite rotateOutUpLeft">project </h1>',
-//     '<h1 class="animated infinite rotateOutUpLeft">Engineering</h1>',
-//     '<h1 class="animated infinite rotateOutUpLeft">Science</h1>'
-// ];
-var classes = [
-    // `As the Senior Signal Non Commissioned Officer in the 483rd Transportation Battalion, Sergeant Liu Installs, operates, and performs unit maintenance on multi-functional/multi-user information processing systems and peripheral equipment and auxiliary devices. He performs input/output data control and bulk data storage operations and transfers data between information processing equipment and systems. He troubleshoots automation equipment and systems to the degree required for isolation of malfunctions to specific hardware or software. He restores equipment to operation by replacement of line replaceable unit (LRU). Installs, operates, performs strapping, restrapping, preventive maintenance checks and unit level maintenance on Secure Communication equipment. He assists in the design, preparation, editing, and testing of computer programs. Drafts associated technical documentation for program reference and maintenance purposes. Modifies existing application packages using application and operating system software and appropriate computer language commands and files. 
+var quote1 = "<p>Yi has one of the strongest work ethics of anyone that's ever worked for me. He is passionate about technology and sought multiple opportunities to improve as a professional. <br> -Stevon Cook</p>";
+var quote2 = "<p>Yi has strong technical knowledge, with experience in the field and it really shows when I need help on a problem because I can count on him for a solid answer. <br> -Francisco Sandoval</p>";
+var quote3 = "<p>Yi is a passionate web developer who applies many useful techniques in developing his applications. Having been exposed to the tech field for 8 years, his experience tied with his curiosity for solving problems is what makes him a necessity in this growing field. <br> -Luke Engle</p>";
+var quote4 = "<p>Sergeant Liu is always on time, is a reliable soldier and always accomplishes his missions and tasks on time. <br> -Enrique Rosario</p>";
+var quote5 = "<p>Yi is thoughtful, motivated, determined, and enthusiastic about coding. He is a creative problem solver with an incredible work ethic. He works very hard to thoroughly understand content and explains CS concepts well to others. He is patient, intelligent, and easy to work with because he listens and provides meaningful contributions towards ideas in group work. <br> -Andrea Piazza</p>";
+var quote6 = "<p>Yi is a reliable volunteer and emerging carpenter with a desire to do quality work. <br> -Erin Colton</p>";
+var quote7 = "<p>Yi is hard working, and dependable. His great professionalism makes him an absolute pleasure to work with. Overall he’s a great colleague to have! <br> -Raj Mahal</p>";
 
-    // Sergeant Liu Configures information processing equipment into required operating configurations. Performs senior operator and systems administrator duties and unit level maintenance functions on assigned computer systems. Compiles production report data and quality control information. Assists less experienced soldiers in the installation, operation, and maintenance of information processing equipment. Writes, analyzes, edits, tests, and modifies computer programs. Drafts program operation manuals and technical program requirements documents. Troubleshoots software using established debugging procedures. 
-    
-    // Sergeant Liu is always on time, is a reliable soldier and always accomplishes his missions and tasks on time. 
-    
-    // Awards include: Army Service Ribbon, Professional Development Ribbon, National Defense and various certificates of acheivement.
-    
-    // Military Schools Attended: Leadership Development Course (WLC), Information Technology School. (US Army Signal Center and School) MC-4 Training (In-Patient - Out Patient Software), CPOF Training (Blue Force Tracker)`,
-    `Yi is extremely confident, hard working, and dependable. His good communication skills and professionalism makes him an absolute pleasure to work with. Overall he’s a great colleague to have!`,
-    `Yi has strong technical knowledge, with experience in the field and it really shows when I need help on a problem because I can count on him for a solid answer.`,
-    `Yi is a passionate web developer who applies many useful techniques in developing his applications. Having been exposed to the tech field for 8 years, his experience tied with his curiosity for solving problems is what makes him a necessity in this growing field.`,
-    `Yi is thoughtful, motivated, determined, and enthusiastic about coding. He is a creative problem solver with an incredible work ethic. He works very hard to thoroughly understand content and explains CS concepts well to others. He is patient, intelligent, and easy to work with because he listens and provides meaningful contributions towards ideas in group work.`
-];
+var quotes = [quote1,quote2,quote3,quote4,quote5,quote6,quote7];
 
-
-function displayClass(i) {
-    $('#testimonials p').text(classes[i]).fadeIn(4000, function () {
-        $(this).delay(600).fadeOut(1000, function () {
-            displayClass((i + 1) % classes.length);
-        });
+var counter = 0;
+function displayClass() {
+    $('#testimonials p').fadeTo(2000, 0, function(){
+        $(this).html(quotes[counter]);
+        counter = ++counter % quotes.length;
+        $(this).fadeTo(2000, 1, displayClass);
     });
 };
-displayClass(0);
+displayClass();
 
 // https://getbootstrap.com/docs/4.1/components/carousel/
 $('#myCarousel').carousel({
@@ -44,6 +32,15 @@ $(".item2").click(function(){
 });
 $(".item3").click(function(){
     $("#myCarousel").carousel(2);
+});
+$(".item4").click(function(){
+    $("#myCarousel").carousel(3);
+});
+$(".item5").click(function(){
+    $("#myCarousel").carousel(4);
+});
+$(".item6").click(function(){
+    $("#myCarousel").carousel(5);
 });
 // $("#myCarousel").swiperight(function() {  
 //     $("#myCarousel").carousel('prev');  
@@ -91,38 +88,38 @@ function onStockError(xhr, status, errorThrown) {
     console.dir(xhr);
 }
 
-var wiki_history_endpoint = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=";
-var wiki_history_year_search = 2018;//year_range;
-var wiki_history_url = `${wiki_history_endpoint}${wiki_history_year_search}`;
-function makeHistroyRequest(){
-    $.ajax({
-        method: "GET",
-        dataType: "jsonp",
-        url: wiki_history_url,
-        success: onWHistorySuccess,
-        error: onWHistoryError
-    });
-}
-makeHistroyRequest();
-function onWHistorySuccess(response) {
-    // console.log(response.query.pages['51390'].revisions[0]['*']);
-    var str = response.query.pages['51390'].revisions[0]['*'];
-    // console.log(str);
-    var arr = str.split(/[=]{3}[A-Za-z]{1,}[=]{3}/g);
-    arr.shift();
-    arr.splice(8);
-    console.log(arr);
-    // the next step map arr's each string, by split it with month, and then add year and month digit to the front of each subarray 
-    for(var i=0; i<arr.length; i++){
-        $('#worldNews').append(`<p>${arr[i]}</p>`);
-    }
-}
-function onWHistoryError(xhr, status, errorThrown) {
-    alert("wiki history, Sorry, there was a problem!");
-    // console.log("wiki history, Error: " + errorThrown);
-    // console.log("wiki history, Status: " + status); 
-    // console.dir(xhr); 
-}
+// var wiki_history_endpoint = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=";
+// var wiki_history_year_search = 2018;//year_range;
+// var wiki_history_url = `${wiki_history_endpoint}${wiki_history_year_search}`;
+// function makeHistroyRequest(){
+//     $.ajax({
+//         method: "GET",
+//         dataType: "jsonp",
+//         url: wiki_history_url,
+//         success: onWHistorySuccess,
+//         error: onWHistoryError
+//     });
+// }
+// makeHistroyRequest();
+// function onWHistorySuccess(response) {
+//     // console.log(response.query.pages['51390'].revisions[0]['*']);
+//     var str = response.query.pages['51390'].revisions[0]['*'];
+//     // console.log(str);
+//     var arr = str.split(/[=]{3}[A-Za-z]{1,}[=]{3}/g);
+//     arr.shift();
+//     arr.splice(8);
+//     console.log(arr);
+//     // the next step map arr's each string, by split it with month, and then add year and month digit to the front of each subarray 
+//     for(var i=0; i<arr.length; i++){
+//         $('#worldNews').append(`<p>${arr[i]}</p>`);
+//     }
+// }
+// function onWHistoryError(xhr, status, errorThrown) {
+//     alert("wiki history, Sorry, there was a problem!");
+//     // console.log("wiki history, Error: " + errorThrown);
+//     // console.log("wiki history, Status: " + status); 
+//     // console.dir(xhr); 
+// }
 
 function makeChart() {
     // var tempArr = Array.from(Array(253).keys());                                 //this later on should be array of events
@@ -152,35 +149,35 @@ function makeChart() {
     });
 }
 
-$('form.contact button').on('click', function(e){
-    e.preventDefault();
-    $('form.contact input, textarea').each(function(e){
-        if($(this).val() === ''){
-            if($(this).attr('type') === 'email'){
-                $(this).siblings().text("Please enter an email address.");
-                $(this).addClass('error');
-                $(this).siblings().fadeIn();
-            }else{
-                $(this).addClass('error');
-                $(this).siblings().fadeIn();
-            }
-        }else{
-            if(!validateEmail($(this).val()) && $(this).attr('type') === 'email'){
-                $(this).addClass('error');
-                $(this).siblings().text("Please enter a valid email address.");
-                $(this).siblings().fadeIn();
-            }else{
-                $(this).removeClass('error');
-                $(this).siblings().hide();
-            }
-        }
-    });
-});
+// $('form.contact button').on('click', function(e){
+//     e.preventDefault();
+//     $('form.contact input, textarea').each(function(e){
+//         if($(this).val() === ''){
+//             if($(this).attr('type') === 'email'){
+//                 $(this).siblings().text("Please enter an email address.");
+//                 $(this).addClass('error');
+//                 $(this).siblings().fadeIn();
+//             }else{
+//                 $(this).addClass('error');
+//                 $(this).siblings().fadeIn();
+//             }
+//         }else{
+//             if(!validateEmail($(this).val()) && $(this).attr('type') === 'email'){
+//                 $(this).addClass('error');
+//                 $(this).siblings().text("Please enter a valid email address.");
+//                 $(this).siblings().fadeIn();
+//             }else{
+//                 $(this).removeClass('error');
+//                 $(this).siblings().hide();
+//             }
+//         }
+//     });
+// });
 
-function validateEmail(Email) {
-    var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    return $.trim(Email).match(pattern) ? true : false;
-}
+// function validateEmail(Email) {
+//     var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+//     return $.trim(Email).match(pattern) ? true : false;
+// }
 
 $('header nav a').on('click', function(e) {
     // prevent the standard link operation on click

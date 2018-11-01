@@ -1,8 +1,8 @@
 /* use during layout */
-body, header, main, nav, section, footer, div, article, p, h1, h2, h3{
+/* body, header, main, nav, section, footer, div, article, p, h1, h2, h3{
     border: .1em solid black;
     box-sizing: border-box;
-}
+} */
 
 /* css variable */
 :root{
@@ -218,3 +218,9 @@ Error Styles
         /* width: 100%; */
     }
 }
+
+.border-webkit{
+    font-size: 2rem;
+    color: white;
+    -webkit-text-stroke: .1rem black;
+  }

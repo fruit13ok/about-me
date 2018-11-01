@@ -42,7 +42,7 @@
                     <a class="nav-item nav-link" href="#portfolio">PORTFOLIO</a>
                     <a class="nav-item nav-link" href="#testimonials">TESTIMONIALS</a>
                     <a class="nav-item nav-link" href="#passion">PASSION</a>
-                    <a class="nav-item nav-link" href="#contact">CONTACT</a>
+                    <!-- <a class="nav-item nav-link" href="#contact">CONTACT</a> -->
                 </div>
             </div>
         </nav>
@@ -53,17 +53,16 @@
             <img src="./assets/images/yi_liu400x400.jpg" alt="">
             <h1>Yi Liu</h1>
             <hr>
-            <h3>Full Stack Web Developer focusing on Back-End</h3>
+            <h3>Full Stack Web Developer</h3>
         </article>
         <article>
             <h2>ABOUT ME</h2>
             <hr>
             <div>
-                <p>I am a General Assembly student studying Full Stack Web Developer specialize in Back-End. I build dynamic
+                <p>I graduated from General Assembly Full Stack Web Developer. I build dynamic
                     database driven websites using Javascript, React, Express, Node, MongoDB, PostgreSQL, MySQL, jQuery,
                     Python, Django, Ajax, CSS, HTML, API, Framework.</p>
-                <p>I am an easy going and dedicated person, love to work for long hours on the things that I passionated, work
-                    on multiple roles. My strengths are resilience, critical thinking, strategizing, and problem solving.</p>
+                <p>I am an easy going and dedicated person. Computer Science and full stack web development graduate. I love to work for long hours on the things such as coding, so I can focus. I worked in multiple roles. My strengths are resilience, critical thinking, strategizing, and problem solving. I like to play Pokemon Go, which gives me lots of walking.</p>
             </div>
         </article>
     </main>
@@ -81,6 +80,9 @@
                     <li class="item1 active"></li>
                     <li class="item2"></li>
                     <li class="item3"></li>
+                    <li class="item4"></li>
+                    <li class="item5"></li>
+                    <li class="item6"></li>
                 </ul>
                 <!-- The slideshow -->
                 <!-- https://github.com/ashleydw/lightbox -->
@@ -93,8 +95,9 @@
                         </a>
                         <div class="carousel-caption">
                             <p>
-                                <a href='https://github.com/fruit13ok/week-one-project'>monument landing page</a>
+                                <a class ="border-webkit" href='https://github.com/fruit13ok/week-one-project'>monument landing page</a>
                             </p>
+                            <br/>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -103,8 +106,9 @@
                         </a>
                         <div class="carousel-caption">
                             <p>
-                                <a href='https://github.com/fruit13ok/week-two-project'>supermarket website</a>
+                                <a class ="border-webkit" href='https://github.com/fruit13ok/week-two-project'>supermarket website</a>
                             </p>
+                            <br/>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -113,8 +117,42 @@
                         </a>
                         <div class="carousel-caption">
                             <p>
-                                <a href='https://github.com/fruit13ok/jquery-geoquakes-lab'>geo quakes</a>
+                                <a class ="border-webkit" href='https://github.com/fruit13ok/jquery-geoquakes-lab'>geo quakes</a>
                             </p>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./assets/images/stocktracker.png" data-toggle="lightbox">
+                            <img src="./assets/images/stocktracker.png" class="img-fluid">
+                        </a>
+                        <div class="carousel-caption">
+                            <p>
+                                <a class ="border-webkit" href='https://github.com/sofia-aguirre/stock-tracker'>Stock Tracker</a>
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./assets/images/4ager.png" data-toggle="lightbox">
+                            <img src="./assets/images/4ager.png" class="img-fluid">
+                        </a>
+                        <div class="carousel-caption">
+                            <p>
+                                <a class ="border-webkit" href='https://github.com/fruit13ok/project-02'>4ager</a>
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./assets/images/AspergerNetwork.png" data-toggle="lightbox">
+                            <img src="./assets/images/AspergerNetwork.png" class="img-fluid">
+                        </a>
+                        <div class="carousel-caption">
+                            <p>
+                                <a class ="border-webkit" href='https://github.com/fruit13ok/AspergerNetwork'>AspergerNetwork</a>
+                            </p>
+                            <br/>
                         </div>
                     </div>
                 </div>
@@ -141,32 +179,28 @@
     </section>
 
     <section id="passion">
-        <h2>my passion, How do world events affect stock</h2>
+        <h2>My passion is stock</h2>
         <hr>
-        <h3>Give stock symbol, daily closing price for N year</h3>
+        <h3>Stock daily closing price for 1 year</h3>
         <form class="lookupStock">
-            <label>Lookup Stock</label>
+            <label>Stock symbol</label>
             <input type="text" class="stock-input" name="q" value="" placeholder="aapl">
-            <input type="submit" value="Go!" class="btn btn-primary">
+            <input type="submit" value="Search" class="btn btn-primary">
         </form>
-        <div id="stockMarket">
-
-        </div>
+        <div id="stockMarket"></div>
         <div>
             <canvas id="myChart"></canvas>
         </div>
-        <h3>world news for N year</h3>
-        <div id="worldNews">
-
-        </div>
-
+        <!-- commented out future feature parse wiki -->
+        <!-- <h3>world news for N year</h3>
+        <div id="worldNews"></div> -->
 
     </section>
-    <section id="contact">
+    <!-- novalidate means not to be validated on submit -->
+    <!-- <section id="contact">
         <h2>contact me</h2>
         <hr>
         <form class="contact" novalidate>
-            <!-- novalidate means not to be validated on submit -->
             <div class="form-group col-third">
                 <input type="text" placeholder="Name">
                 <p class="error-message">Please enter your full name.</p>
@@ -185,16 +219,11 @@
             </div>
             <button type="submit">Submit</button>
         </form>
-    </section>
+    </section> -->
     <footer>
         <div>
             <h5>My Email Address:</h5>
             <p>fruit13ok@gmail.com</p>
-            <h5>Credit To:</h5>
-            <p>Lightbox to zoom image by "ekko-lightbox"</p>
-            <p>Stock data pull from "api.iextrading.com"</p>
-            <p>Historical Events pull from "Wikipedia"</p>
-            <p>Chart tool "chart.js"</p>
         </div>
         <nav>
             <a href="https://www.facebook.com/profile.php?id=100006229458138">
